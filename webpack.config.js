@@ -6,7 +6,7 @@ module.exports = (env, options) => {
   return {
     mode: options.mode,
     entry: {
-      app: path.join(__dirname, 'src', 'index.js')
+      app: './src/index.js'
     },
     output: {
       filename: '[name].[chunkhash].js',
@@ -18,6 +18,10 @@ module.exports = (env, options) => {
     },
     module: {
       rules: [
+        {
+          test: /\.hbs$/,
+          loader: 'handlebars-loader'
+        },
         {
           test: /\.s[ac]ss$/i,
           use: [

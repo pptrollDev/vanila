@@ -89,18 +89,14 @@ let Home = {
       }
     }
 
-    function getProblems() {
-      fetch('https://my-json-server.typicode.com/kakaopay-fe/resources/words')
-        .then(function (response) {
-          return response.json();
-        })
-        .then(function (json) {
-          problems = json;
-          startGame();
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+    async function getProblems() {
+      try {
+        let res = await fetch('https://my-json-server.typicode.com/kakaopay-fe/resources/words');
+        problems = await res.json();
+        startGame();
+      } catch (error) {
+        console.log(error);
+      }
     }
 
     function startGame() {

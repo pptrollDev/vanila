@@ -8,10 +8,7 @@
     "build:dev": "webpack --mode development",
     "start": "webpack-dev-server --mode development --open --hot"
   },
-  "dependencies": {
-    "handlebars": "^4.7.7",
-    "handlebars-loader": "^1.7.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",

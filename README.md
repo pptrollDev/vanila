@@ -1,8 +1,8 @@
 # vanilla
 
-npm install
-npm start
-npm build
+1. npm install
+2. npm start
+3. npm build
 
 # 해결 전략
 
